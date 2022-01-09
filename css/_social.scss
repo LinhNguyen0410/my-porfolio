@@ -1,0 +1,40 @@
+.social-box {
+  position: fixed;
+  top: 70%;
+  left: 10px;
+  background-color: $white;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 1px gray;
+  &__linkedin {
+    z-index: 111;
+    & a {
+      & ion-icon {
+        font-size: 3rem;
+        color: rgb(214, 80, 18);
+      }
+    }
+  }
+  &__facebook {
+    z-index: 111;
+    & a {
+      & ion-icon {
+        font-size: 3rem;
+        color: rgb(53, 53, 177);
+      }
+    }
+  }
+  &__github {
+    z-index: 111;
+    & a {
+      & ion-icon {
+        font-size: 3rem;
+        color: $black;
+      }
+    }
+  }
+}

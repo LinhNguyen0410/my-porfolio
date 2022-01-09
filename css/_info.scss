@@ -4,19 +4,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
   & .section-avatar {
     margin-right: 30px;
     & img {
-      border: 10px solid $white;
-      box-shadow: 0 1px 4px $gray;
+      //border: 10px solid $white;
+      box-shadow: 0 16px 14px rgb(211, 210, 210);
       width: 280px;
       height: 280px;
-      border-radius: 60px;
-      -webkit-border-radius: 60px;
-      -moz-border-radius: 60px;
-      -ms-border-radius: 60px;
-      -o-border-radius: 60px;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      -o-border-radius: 100px;
       object-fit: cover;
+      clip-path: circle(99.2% at 28% 61%);
+      transition: all 0.2s linear;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -o-transform: scale(1.01);
+      }
     }
   }
   & .section-info {
@@ -31,7 +46,7 @@
   }
   & .section-name {
     display: block;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     letter-spacing: 3px;
     margin-top: 10px;
@@ -40,7 +55,7 @@
   }
   & .section-desc {
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 1.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 5;

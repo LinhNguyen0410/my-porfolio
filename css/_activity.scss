@@ -19,14 +19,16 @@
       & .slider-item {
         cursor: pointer;
         & img {
-          max-width: 400px;
+          width: 400px;
+          max-height: 220px;
           margin: 0px 30px;
-          border: 4px solid $blue;
+          border: 2px solid $blue;
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
+          object-fit: cover;
         }
       }
     }

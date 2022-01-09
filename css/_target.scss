@@ -12,7 +12,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 70px;
     & .objectives-item {
       width: 60%;
       min-height: 150px;
@@ -25,13 +25,24 @@
       -o-border-radius: 20px;
       display: flex;
       align-items: center;
+      text-align: center;
+      padding: 0 10px;
+      position: relative;
       &-text {
-        font-size: 1.6rem;
-        text-align: center;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
         & i {
-          font-size: 3rem;
-          color: $orange-light;
-          margin: 0 15px;
+          font-size: 4rem;
+          color: rgb(216, 211, 211);
+          position: absolute;
+          &:first-child {
+            top: -30px;
+            left: -40px;
+          }
+          &:last-child {
+            bottom: -30px;
+            right: -40px;
+          }
         }
       }
     }
