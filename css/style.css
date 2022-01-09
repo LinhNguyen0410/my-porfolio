@@ -165,15 +165,16 @@ body {
   margin-right: 30px;
 }
 .section-intro .section-avatar img {
-  border: 14px solid #fff;
+  border: 10px solid #fff;
   box-shadow: 0 1px 4px #7a7a7a;
   width: 280px;
   height: 280px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  object-fit: cover;
 }
 .section-intro .section-info {
   font-size: 2rem;
