@@ -1,0 +1,65 @@
+.section-education {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  &__title {
+    font-size: 2rem;
+    margin-left: 40px;
+    font-weight: 500;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    & .education-item {
+      width: 40%;
+      min-height: 150px;
+      border: 2px solid $gray;
+      padding: 10px;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      position: relative;
+      box-shadow: 0 0 2px $blue;
+      & .education-img {
+        width: 80px;
+        background-color: $white;
+        padding: 10px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        box-shadow: 0 1px 3px $gray;
+        position: absolute;
+        top: -40px;
+        left: -30px;
+      }
+      & .education-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        &-name {
+          display: block;
+          font-size: 2rem;
+          font-weight: 500;
+        }
+        &-job {
+          display: block;
+          font-size: 1.5rem;
+        }
+        &-desc {
+          font-size: 1.2rem;
+          color: $gray;
+        }
+      }
+    }
+  }
+}

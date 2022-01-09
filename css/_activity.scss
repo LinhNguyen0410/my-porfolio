@@ -1,0 +1,34 @@
+.section-activity {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  &__title {
+    font-size: 2rem;
+    margin-left: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  &__content {
+    width: 80%;
+    margin: 0 auto;
+    & .activity-slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .slider-item {
+        cursor: pointer;
+        & img {
+          max-width: 400px;
+          margin: 0px 30px;
+          border: 4px solid $blue;
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+        }
+      }
+    }
+  }
+}

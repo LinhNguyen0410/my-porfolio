@@ -1,0 +1,39 @@
+.section-objectives {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  &__title {
+    font-size: 2rem;
+    margin-left: 40px;
+    font-weight: 500;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    & .objectives-item {
+      width: 60%;
+      min-height: 150px;
+      border: 1px solid $gray;
+      box-shadow: 0 0 12px $gray;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      display: flex;
+      align-items: center;
+      &-text {
+        font-size: 1.6rem;
+        text-align: center;
+        & i {
+          font-size: 3rem;
+          color: $orange-light;
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+}

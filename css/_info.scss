@@ -1,0 +1,83 @@
+.section-intro {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .section-avatar {
+    margin-right: 30px;
+    & img {
+      border: 14px solid $white;
+      box-shadow: 0 1px 4px $gray;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
+  & .section-info {
+    font-size: 2rem;
+    width: 30%;
+  }
+  & .section-job {
+    display: block;
+    font-size: 1.6rem;
+    opacity: 0.6;
+    letter-spacing: 2px;
+  }
+  & .section-name {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  & .section-desc {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  & .section-btn {
+    margin-top: 20px;
+    & .btn-download,
+    .btn-contact {
+      border: 3px $blue solid;
+      border-radius: 40px;
+      -webkit-border-radius: 40px;
+      -moz-border-radius: 40px;
+      -ms-border-radius: 40px;
+      -o-border-radius: 40px;
+      padding: 10px 30px;
+      color: $gray;
+      background-color: #fff;
+      letter-spacing: 1px;
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+    }
+    & .btn-contact {
+      border: 3px $gray solid;
+      &:hover {
+        background-color: rgb(199, 199, 199);
+        color: $white;
+      }
+    }
+    & .btn-download:hover {
+      background-color: rgb(118, 150, 199);
+      color: $white;
+    }
+  }
+}
