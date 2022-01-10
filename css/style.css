@@ -63,9 +63,10 @@ li {
 }
 #container {
   width: 94%;
-  height: 2900px;
+  height: auto;
   background-color: #fff;
   margin: 40px auto;
+  padding-bottom: 100px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -350,7 +351,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   border: 2px solid #42629d;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -363,7 +364,7 @@ body {
   box-shadow: 0 2px #42629d;
 }
 .section-project__content .project-img img {
-  width: 800px;
+  min-width: 280px;
   max-height: 200px;
   margin: 10px;
   border-radius: 20px;

@@ -2,6 +2,7 @@ const $$ = document.querySelector.bind(document);
 const $$$ = document.querySelectorAll.bind(document);
 // ----------------------------
 const header = $$(".header");
+const btnBackTop = $$(".back");
 
 function handleChangeHeaderWhenScrolled() {
   if (!header) return;
