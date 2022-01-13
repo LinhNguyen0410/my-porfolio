@@ -76,3 +76,32 @@
     }
   }
 }
+
+// phone
+@media screen and(min-width : "200px") and (max-width: "539px") {
+  .section-skills {
+    margin-top: -30px;
+    &__title {
+      text-align: center;
+    }
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      & .skill_item {
+        width: 90%;
+        display: block;
+        &-icon {
+          font-size: 4rem;
+        }
+        & .skill-title {
+          display: none;
+        }
+        & .skill-desc {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -67,3 +67,15 @@
     gap: 5px;
   }
 }
+// phone
+@media screen and(min-width : "200px") and (max-width: "539px") {
+  .social-box {
+    position: fixed;
+    top: 90%;
+    left: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 111111111111;
+    gap: 5px;
+  }
+}

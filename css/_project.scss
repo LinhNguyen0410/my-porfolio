@@ -232,3 +232,40 @@
     }
   }
 }
+
+// phone
+@media screen and(min-width : "200px") and (max-width: "539px") {
+  .section-project {
+    &__title {
+      text-align: center;
+    }
+    &__content {
+      margin: 20px;
+      & .project-item {
+        width: 98%;
+        padding: 10px;
+        flex-direction: column;
+        gap: 0;
+      }
+      & .project-img img {
+        width: 100px;
+        height: 150px;
+      }
+      & .project-info {
+        & .project-name {
+          text-align: center;
+        }
+        & .project-tools {
+          text-align: center;
+          font-size: 2rem;
+        }
+        & .project-desc {
+          display: none;
+        }
+        & .project-btn {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

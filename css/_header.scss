@@ -152,3 +152,26 @@
     }
   }
 }
+// phone
+@media screen and(min-width : "200px") and (max-width: "539px") {
+  .header {
+    height: 80px;
+    position: absolute;
+    top: 0 !important;
+    &-logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      & img {
+        width: 100px;
+      }
+    }
+    &-menu {
+      display: none;
+      width: 100%;
+    }
+    &-action {
+      display: none;
+    }
+  }
+}

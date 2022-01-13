@@ -138,3 +138,26 @@
     }
   }
 }
+
+// phone
+@media screen and(min-width : "200px") and (max-width: "539px") {
+  .section-education {
+    &__content {
+      & .education-item {
+        width: 80%;
+        margin: 10px 0;
+        & .education-info {
+          &-name {
+            font-size: 1.4rem;
+          }
+          &-job {
+            font-size: 1.3rem;
+          }
+          &-desc {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
