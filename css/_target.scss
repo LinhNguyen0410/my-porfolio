@@ -96,9 +96,14 @@
 // phone
 @media screen and(min-width : "200px") and (max-width: "539px") {
   .section-objectives {
+    &__title {
+      text-align: center;
+    }
     &__content {
+      margin-top: 0px;
       & .objectives-item {
-        width: 76%;
+        width: 100%;
+        margin: 20px;
         &-text {
           font-size: 1.3rem;
           padding: 20px;

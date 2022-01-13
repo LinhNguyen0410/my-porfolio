@@ -38,11 +38,38 @@
     font-size: 2rem;
     width: 30%;
   }
+  & .static-txt {
+    font-weight: 500;
+    font-size: 1.7rem;
+    color: $blue;
+  }
   & .section-job {
-    display: block;
+    position: relative;
+    color: orange;
     font-size: 1.6rem;
     opacity: 0.6;
     letter-spacing: 2px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $white;
+      display: block;
+      z-index: 11111;
+      top: 0;
+      width: 100%;
+      height: 37px;
+      animation: mymove steps(20, end) 3s infinite;
+      animation-timing-function: linear;
+      -webkit-animation: mymove steps(20, end) 3s infinite;
+    }
+    @keyframes mymove {
+      from {
+        left: 0px;
+      }
+      to {
+        left: 350px;
+      }
+    }
   }
   & .section-name {
     display: block;
@@ -108,6 +135,13 @@
         object-fit: cover;
       }
     }
+    & .static-txt {
+      font-weight: 500;
+      font-size: 3rem;
+      margin-right: 5px;
+      color: $blue;
+    }
+
     & .section-job {
       font-size: 2.8rem;
     }
@@ -162,12 +196,15 @@
         height: 230px;
       }
     }
+    & .section-info {
+      width: 50%;
+    }
     & .section-job {
       font-size: 1.4rem;
     }
     & .section-name {
       font-size: 3rem;
-      margin-top: 0;
+      margin-top: 5px;
     }
     & .section-desc {
       margin-top: 0;
@@ -197,12 +234,15 @@
         clip-path: circle(64.9% at 34% 42%);
       }
     }
+    & .section-info {
+      width: 50%;
+    }
     & .section-job {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
     }
     & .section-name {
       font-size: 3rem;
-      margin-top: 0;
+      margin-top: 3px;
     }
     & .section-desc {
       margin-top: 0;
@@ -245,15 +285,23 @@
         );
       }
     }
+    & .static-txt {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: $blue;
+      display: block;
+      margin-bottom: -8px;
+    }
     & .section-info {
-      width: 60%;
+      width: 50%;
     }
     & .section-job {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      display: inline-block;
     }
     & .section-name {
       font-size: 1.5rem;
-      margin-top: 0;
+      margin-top: 9.5px;
     }
     & .section-desc {
       margin-top: 0;

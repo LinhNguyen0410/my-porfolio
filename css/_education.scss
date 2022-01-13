@@ -142,13 +142,17 @@
 // phone
 @media screen and(min-width : "200px") and (max-width: "539px") {
   .section-education {
+    &__title {
+      text-align: center;
+    }
     &__content {
+      margin-top: 20px;
       & .education-item {
-        width: 80%;
-        margin: 10px 0;
+        width: 88%;
+        margin: 10px 30px;
         & .education-info {
           &-name {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
           }
           &-job {
             font-size: 1.3rem;

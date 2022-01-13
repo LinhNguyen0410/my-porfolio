@@ -4,7 +4,7 @@
   height: auto;
   margin-top: 100px;
   &__title {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: 40px;
     font-weight: 500;
     margin-bottom: 40px;
@@ -102,6 +102,9 @@
 // phone
 @media screen and(min-width : "200px") and (max-width: "539px") {
   .section-activity {
+    &__title {
+      text-align: center;
+    }
     &__content {
       & .activity-slider {
         & .slider-item {

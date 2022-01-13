@@ -165,7 +165,7 @@ body {
 .header-menu-item a:hover {
   color: #000;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-weight: 500;
 }
 .header-action {
   width: 20%;
@@ -325,11 +325,38 @@ body {
   font-size: 2rem;
   width: 30%;
 }
+.section-intro .static-txt {
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: #42629d;
+}
 .section-intro .section-job {
-  display: block;
+  position: relative;
+  color: orange;
   font-size: 1.6rem;
   opacity: 0.6;
   letter-spacing: 2px;
+}
+.section-intro .section-job::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  z-index: 11111;
+  top: 0;
+  width: 100%;
+  height: 37px;
+  animation: mymove steps(20, end) 3s infinite;
+  animation-timing-function: linear;
+  -webkit-animation: mymove steps(20, end) 3s infinite;
+}
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 350px;
+  }
 }
 .section-intro .section-name {
   display: block;
@@ -395,6 +422,12 @@ body {
     height: 380px;
     object-fit: cover;
   }
+  .section-intro .static-txt {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-right: 5px;
+    color: #42629d;
+  }
   .section-intro .section-job {
     font-size: 2.8rem;
   }
@@ -440,12 +473,15 @@ body {
     width: 230px;
     height: 230px;
   }
+  .section-intro .section-info {
+    width: 50%;
+  }
   .section-intro .section-job {
     font-size: 1.4rem;
   }
   .section-intro .section-name {
     font-size: 3rem;
-    margin-top: 0;
+    margin-top: 5px;
   }
   .section-intro .section-desc {
     margin-top: 0;
@@ -471,12 +507,15 @@ body {
     height: 190px;
     clip-path: circle(64.9% at 34% 42%);
   }
+  .section-intro .section-info {
+    width: 50%;
+  }
   .section-intro .section-job {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .section-intro .section-name {
     font-size: 3rem;
-    margin-top: 0;
+    margin-top: 3px;
   }
   .section-intro .section-desc {
     margin-top: 0;
@@ -508,15 +547,23 @@ body {
     height: 150px;
     clip-path: polygon(14% 13%, 70% 0%, 100% 38%, 95% 86%, 70% 100%, 30% 100%, 0 92%, 0% 30%);
   }
+  .section-intro .static-txt {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #42629d;
+    display: block;
+    margin-bottom: -8px;
+  }
   .section-intro .section-info {
-    width: 60%;
+    width: 50%;
   }
   .section-intro .section-job {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    display: inline-block;
   }
   .section-intro .section-name {
     font-size: 1.5rem;
-    margin-top: 0;
+    margin-top: 9.5px;
   }
   .section-intro .section-desc {
     margin-top: 0;
@@ -615,7 +662,7 @@ body {
 }
 @media screen and (min-width: 200px) and (max-width: 539px) {
   .section-skills {
-    margin-top: -30px;
+    margin-top: -50px;
   }
   .section-skills__title {
     text-align: center;
@@ -660,18 +707,18 @@ body {
 .section-project__content {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
   margin-top: 40px;
 }
 .section-project__content .project-item {
-  width: 45%;
-  padding: 10px;
+  width: 50%;
+  padding: 25px;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 13px;
   border: 2px solid #42629d;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -683,8 +730,11 @@ body {
 .section-project__content .project-item:hover {
   box-shadow: 0 2px #42629d;
 }
+.section-project__content .project-img {
+  width: 60%;
+}
 .section-project__content .project-img img {
-  min-width: 280px;
+  min-width: 250px;
   max-height: 200px;
   margin: 10px;
   border-radius: 20px;
@@ -705,11 +755,10 @@ body {
   border: 1px solid #faa258;
 }
 .section-project__content .project-info {
-  margin-left: 20px;
+  width: 40%;
 }
 .section-project__content .project-info .project-name {
   font-size: 1.8rem;
-  width: 200px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -735,7 +784,6 @@ body {
 .section-project__content .project-info .project-btn {
   margin-top: 15px;
   display: flex;
-  flex-wrap: wrap;
 }
 .section-project__content .project-info .project-btn .btn-view,
 .section-project__content .project-info .project-btn .btn-code {
@@ -744,7 +792,7 @@ body {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  padding: 6px 15px;
+  padding: 6px 10px;
   margin: 0 5px;
   cursor: pointer;
   border: none;
@@ -870,9 +918,13 @@ body {
     flex-direction: column;
     gap: 0;
   }
+  .section-project__content .project-img {
+    display: flex;
+    justify-content: center;
+  }
   .section-project__content .project-img img {
-    width: 100px;
-    height: 150px;
+    width: 290px;
+    height: 250px;
   }
   .section-project__content .project-info .project-name {
     text-align: center;
@@ -1010,12 +1062,18 @@ body {
   }
 }
 @media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-education__title {
+    text-align: center;
+  }
+  .section-education__content {
+    margin-top: 20px;
+  }
   .section-education__content .education-item {
-    width: 80%;
-    margin: 10px 0;
+    width: 88%;
+    margin: 10px 30px;
   }
   .section-education__content .education-item .education-info-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .section-education__content .education-item .education-info-job {
     font-size: 1.3rem;
@@ -1106,8 +1164,15 @@ body {
   }
 }
 @media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-objectives__title {
+    text-align: center;
+  }
+  .section-objectives__content {
+    margin-top: 0px;
+  }
   .section-objectives__content .objectives-item {
-    width: 76%;
+    width: 100%;
+    margin: 20px;
   }
   .section-objectives__content .objectives-item-text {
     font-size: 1.3rem;
@@ -1121,7 +1186,7 @@ body {
   margin-top: 100px;
 }
 .section-activity__title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-left: 40px;
   font-weight: 500;
   margin-bottom: 40px;
@@ -1182,6 +1247,9 @@ body {
   }
 }
 @media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-activity__title {
+    text-align: center;
+  }
   .section-activity__content .activity-slider .slider-item img {
     width: 140px;
     height: 120px;
