@@ -66,3 +66,75 @@
     }
   }
 }
+@media screen and(min-width : '1600px') {
+  .section-education {
+    &__title {
+      font-size: 3rem;
+    }
+    &__content {
+      & .education-item {
+        width: 35%;
+        & .education-img {
+          width: 100px;
+        }
+        & .education-info {
+          &-name {
+            font-size: 2rem;
+          }
+          &-job {
+            font-size: 1.8rem;
+          }
+          &-desc {
+            font-size: 1.6rem;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+}
+// ipad
+@media screen and(min-width : "768px") and (max-width: "1023px") {
+  .section-education {
+    &__content {
+      & .education-item {
+        width: 80%;
+        margin: 10px 0;
+        & .education-info {
+          &-name {
+            font-size: 1.8rem;
+          }
+          &-job {
+            font-size: 1.6rem;
+          }
+          &-desc {
+            font-size: 1.4rem;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+}
+// small tablet
+@media screen and(min-width : "540px") and (max-width: "767px") {
+  .section-education {
+    &__content {
+      & .education-item {
+        width: 70%;
+        & .education-info {
+          &-name {
+            font-size: 1.6rem;
+          }
+          &-job {
+            font-size: 1.5rem;
+          }
+          &-desc {
+            font-size: 1.3rem;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+}

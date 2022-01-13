@@ -34,3 +34,68 @@
     }
   }
 }
+@media screen and(min-width : '1920px') {
+  .section-activity {
+    &__title {
+      font-size: 3rem;
+    }
+    &__content {
+      & .activity-slider {
+        & .slider-item {
+          & img {
+            width: 600px;
+            max-height: 320px;
+          }
+        }
+      }
+    }
+  }
+}
+// iPad Pro
+@media screen and(min-width : "1024px") and (max-width: "1200px") {
+  .section-activity {
+    &__title {
+      font-size: 3rem;
+    }
+    &__content {
+      & .activity-slider {
+        & .slider-item {
+          & img {
+            width: 340px;
+            height: 320px;
+          }
+        }
+      }
+    }
+  }
+}
+// ipad
+@media screen and(min-width : "768px") and (max-width: "1023px") {
+  .section-activity {
+    &__content {
+      & .activity-slider {
+        & .slider-item {
+          & img {
+            width: 280px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+// small tablet
+@media screen and(min-width : "540px") and (max-width: "767px") {
+  .section-activity {
+    &__content {
+      & .activity-slider {
+        & .slider-item {
+          & img {
+            width: 220px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}

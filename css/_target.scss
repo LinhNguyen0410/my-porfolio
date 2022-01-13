@@ -48,3 +48,47 @@
     }
   }
 }
+@media screen and(min-width : '1600px') {
+  .section-objectives {
+    &__title {
+      font-size: 3rem;
+    }
+    &__content {
+      & .objectives-item {
+        width: 60%;
+        &-text {
+          font-size: 1.8rem;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+// ipad
+@media screen and(min-width : "768px") and (max-width: "1023px") {
+  .section-objectives {
+    &__content {
+      & .objectives-item {
+        width: 76%;
+        &-text {
+          font-size: 1.4rem;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+// small tablet
+@media screen and(min-width : "540px") and (max-width: "767px") {
+  .section-objectives {
+    &__content {
+      & .objectives-item {
+        width: 76%;
+        &-text {
+          font-size: 1.4rem;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}

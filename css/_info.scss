@@ -97,3 +97,126 @@
     }
   }
 }
+@media screen and(min-width : '1600px') {
+  .section-intro {
+    margin-top: 150px;
+    & .section-avatar {
+      margin-right: 60px;
+      & img {
+        width: 380px;
+        height: 380px;
+        object-fit: cover;
+      }
+    }
+    & .section-job {
+      font-size: 2.8rem;
+    }
+    & .section-name {
+      font-size: 5rem;
+    }
+    & .section-desc {
+      font-size: 2rem;
+    }
+  }
+}
+// iPad Pro
+@media screen and(min-width : "1024px") and (max-width: "1200px") {
+  .section-intro {
+    & .section-avatar {
+      & img {
+        width: 230px;
+        height: 230px;
+      }
+    }
+    & .section-info {
+    }
+    & .section-job {
+      font-size: 1.4rem;
+    }
+    & .section-name {
+      font-size: 3rem;
+      margin-top: 0;
+    }
+    & .section-desc {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    & .section-btn {
+      margin-top: 10px;
+      display: flex;
+      & .btn-download,
+      .btn-contact {
+        margin: 0 5px;
+        padding: 4px 10px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+// ipad
+@media screen and(min-width : "768px") and (max-width: "1023px") {
+  .section-intro {
+    & .section-avatar {
+      & img {
+        width: 230px;
+        height: 230px;
+      }
+    }
+    & .section-job {
+      font-size: 1.4rem;
+    }
+    & .section-name {
+      font-size: 3rem;
+      margin-top: 0;
+    }
+    & .section-desc {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    & .section-btn {
+      margin-top: 10px;
+      display: flex;
+      & .btn-download,
+      .btn-contact {
+        margin: 0 5px;
+        padding: 4px 10px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+// small tablet
+@media screen and(min-width : "540px") and (max-width: "767px") {
+  .section-intro {
+    margin-top: 0;
+    & .section-avatar {
+      & img {
+        width: 190px;
+        height: 190px;
+        clip-path: circle(64.9% at 34% 42%);
+      }
+    }
+    & .section-job {
+      font-size: 1.1rem;
+    }
+    & .section-name {
+      font-size: 2rem;
+      margin-top: 0;
+    }
+    & .section-desc {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    & .section-btn {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+      & .btn-download,
+      .btn-contact {
+        margin: 5px 0;
+        padding: 4px 30px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
