@@ -856,7 +856,7 @@ body {
     font-size: 1.8rem;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
   .section-project__content .project-item {
     width: 80%;
   }
