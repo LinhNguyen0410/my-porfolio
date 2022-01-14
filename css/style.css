@@ -863,6 +863,10 @@ body {
   .project-img img {
     min-width: 400px;
   }
+
+  .project-info {
+    margin-left: 20px;
+  }
 }
 @media screen and (min-width: 1024px) and (max-width: 1259px) {
   .section-project__content .project-item {
