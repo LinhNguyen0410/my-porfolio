@@ -131,7 +131,52 @@
     }
   }
 }
-@media screen and(min-width : "1264px") and (max-width: "2000px") {
+// big screen
+@media screen and(min-width : "1700px") {
+  .section-project {
+    &__title {
+      font-size: 3rem;
+    }
+    &__content {
+      gap: 100px;
+      & .project-item {
+        display: none;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+      }
+      & .project-img img {
+        min-width: 360px;
+        max-height: 250px;
+      }
+      & .project-info {
+        margin-left: 20px;
+        width: 280px;
+        & .project-name {
+          font-size: 3rem;
+        }
+        & .project-tools {
+          font-size: 2em;
+        }
+        & .project-desc {
+          font-size: 1.8rem;
+        }
+        & .project-btn {
+          & .btn-view,
+          .btn-code {
+            padding: 6px 30px;
+            margin: 0 5px;
+            & a {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// laptop
+@media screen and(min-width : "1264px") and (max-width: "1699px") {
   .section-project {
     &__title {
       font-size: 3rem;

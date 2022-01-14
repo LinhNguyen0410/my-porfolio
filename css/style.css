@@ -819,7 +819,47 @@ body {
   color: #000;
 }
 
-@media screen and (min-width: 1264px) and (max-width: 2000px) {
+@media screen and (min-width: 1700px) {
+  .section-project__title {
+    font-size: 3rem;
+  }
+  .section-project__content {
+    gap: 100px;
+  }
+  .section-project__content .project-item {
+    display: none;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+  .section-project__content .project-img img {
+    min-width: 360px;
+    max-height: 250px;
+  }
+  .section-project__content .project-info {
+    margin-left: 20px;
+    width: 280px;
+  }
+  .section-project__content .project-info .project-name {
+    font-size: 3rem;
+  }
+  .section-project__content .project-info .project-tools {
+    font-size: 2em;
+  }
+  .section-project__content .project-info .project-desc {
+    font-size: 1.8rem;
+  }
+  .section-project__content .project-info .project-btn .btn-view,
+.section-project__content .project-info .project-btn .btn-code {
+    padding: 6px 30px;
+    margin: 0 5px;
+  }
+  .section-project__content .project-info .project-btn .btn-view a,
+.section-project__content .project-info .project-btn .btn-code a {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1264px) and (max-width: 1699px) {
   .section-project__title {
     font-size: 3rem;
   }
