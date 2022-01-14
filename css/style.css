@@ -712,7 +712,7 @@ body {
   margin-top: 40px;
 }
 .section-project__content .project-item {
-  width: 50%;
+  width: 45%;
   padding: 25px;
   height: auto;
   display: flex;
@@ -857,6 +857,11 @@ body {
   .section-project__content .project-info .project-btn .btn-view a,
 .section-project__content .project-info .project-btn .btn-code a {
     font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1264px) and (max-width: 1699px) {
+  .project-img img {
+    min-width: 400px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1259px) {

@@ -22,7 +22,7 @@
     margin-top: 40px;
 
     & .project-item {
-      width: 50%;
+      width: 45%;
       padding: 25px;
       height: auto;
       display: flex;
@@ -177,6 +177,9 @@
 }
 // laptop
 @media screen and(min-width : "1264px") and (max-width: "1699px") {
+  .project-img img {
+    min-width: 400px;
+  }
 }
 // iPad Pro
 @media screen and(min-width : "1024px") and (max-width: "1259px") {
