@@ -36,3 +36,68 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
   });
 });
+
+$(".responsive").slick({
+  slidesToShow: 2,
+  centerMode: true,
+  centerPadding: "40px",
+  infinite: true,
+  speed: 800,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "40px",
+        infinite: true,
+        speed: 800,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+    },
+    {
+      breakpoint: 952,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        centerMode: true,
+        centerPadding: "60px",
+        speed: 800,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        speed: 800,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+    },
+    {
+      breakpoint: 420,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        speed: 800,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+    },
+  ],
+});

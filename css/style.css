@@ -1202,10 +1202,12 @@ body {
 }
 .section-activity__content .activity-slider .slider-item {
   cursor: pointer;
+  display: flex;
+  gap: 20px;
 }
 .section-activity__content .activity-slider .slider-item img {
-  width: 400px;
-  max-height: 220px;
+  min-width: 550px;
+  height: 300px;
   margin: 0px 30px;
   border: 2px solid #42629d;
   border-radius: 10px;
@@ -1216,43 +1218,49 @@ body {
   object-fit: cover;
 }
 
-@media screen and (min-width: 1920px) {
-  .section-activity__title {
-    font-size: 3rem;
-  }
-  .section-activity__content .activity-slider .slider-item img {
-    width: 600px;
-    max-height: 320px;
-  }
-}
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .section-activity__title {
-    font-size: 3rem;
+  .section-activity__content {
+    width: 100%;
   }
   .section-activity__content .activity-slider .slider-item img {
-    width: 340px;
-    height: 320px;
+    min-width: 400px;
+    height: 280px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-activity__title {
+    font-size: 2rem;
+  }
+  .section-activity__content {
+    width: 100%;
+  }
   .section-activity__content .activity-slider .slider-item img {
-    width: 280px;
-    height: 200px;
+    width: 200px;
+    height: 280px;
   }
 }
 @media screen and (min-width: 540px) and (max-width: 767px) {
+  .section-activity__title {
+    font-size: 2rem;
+  }
+  .section-activity__content {
+    width: 100%;
+  }
   .section-activity__content .activity-slider .slider-item img {
-    width: 220px;
-    height: 200px;
+    min-width: 400px !important;
+    height: 250px;
   }
 }
 @media screen and (min-width: 200px) and (max-width: 539px) {
   .section-activity__title {
-    text-align: center;
+    font-size: 2rem;
+  }
+  .section-activity__content {
+    width: 100%;
   }
   .section-activity__content .activity-slider .slider-item img {
-    width: 140px;
-    height: 120px;
+    min-width: 250px !important;
+    height: 200px;
   }
 }
 .social-box {
@@ -1268,23 +1276,15 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   box-shadow: 0 0 1px gray;
-}
-.social-box__linkedin {
-  z-index: 111;
+  z-index: 111111111111111100000000000;
 }
 .social-box__linkedin a ion-icon {
   font-size: 3rem;
   color: #d65012;
 }
-.social-box__facebook {
-  z-index: 111;
-}
 .social-box__facebook a ion-icon {
   font-size: 3rem;
   color: #3535b1;
-}
-.social-box__github {
-  z-index: 111;
 }
 .social-box__github a ion-icon {
   font-size: 3rem;
@@ -1312,7 +1312,6 @@ body {
     left: 10px;
     display: flex;
     flex-direction: row-reverse;
-    z-index: 1111;
     gap: 5px;
   }
 }
@@ -1323,7 +1322,6 @@ body {
     left: 10px;
     display: flex;
     flex-direction: row-reverse;
-    z-index: 111111111111;
     gap: 5px;
   }
 }

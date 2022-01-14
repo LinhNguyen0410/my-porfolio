@@ -11,8 +11,8 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   box-shadow: 0 0 1px gray;
+  z-index: 111111111111111111111111111;
   &__linkedin {
-    z-index: 111;
     & a {
       & ion-icon {
         font-size: 3rem;
@@ -21,7 +21,6 @@
     }
   }
   &__facebook {
-    z-index: 111;
     & a {
       & ion-icon {
         font-size: 3rem;
@@ -30,7 +29,6 @@
     }
   }
   &__github {
-    z-index: 111;
     & a {
       & ion-icon {
         font-size: 3rem;
@@ -63,7 +61,6 @@
     left: 10px;
     display: flex;
     flex-direction: row-reverse;
-    z-index: 1111;
     gap: 5px;
   }
 }
@@ -75,7 +72,6 @@
     left: 10px;
     display: flex;
     flex-direction: row-reverse;
-    z-index: 111111111111;
     gap: 5px;
   }
 }
