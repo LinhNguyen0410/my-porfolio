@@ -38,6 +38,14 @@
 }
 @media screen and(min-width : '1920px') {
 }
+
+// laptop
+@media screen and(min-width : "1264px") and (max-width: "1699px") {
+  .slider-item img {
+    min-width: 380px;
+    height: 275px;
+  }
+}
 // iPad Pro
 @media screen and(min-width : "1024px") and (max-width: "1200px") {
   .section-activity {
