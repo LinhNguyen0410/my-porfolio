@@ -1218,7 +1218,7 @@ body {
   gap: 20px;
 }
 .section-activity__content .activity-slider .slider-item img {
-  min-width: 550px;
+  min-width: 400px;
   height: 300px;
   margin: 0px 30px;
   border: 2px solid #42629d;
