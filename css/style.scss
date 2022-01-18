@@ -1,11 +1,2481 @@
-@import "_reset";
-@import "_variables";
-@import "_global";
-@import "_header";
-@import "_info";
-@import "_skills";
-@import "_project";
-@import "_education";
-@import "_target";
-@import "_activity";
-@import "_social";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+/* remove animation for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+#container {
+  width: 94%;
+  height: auto;
+  background-color: #fff;
+  margin: 40px auto;
+  padding-bottom: 100px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  overflow: hidden;
+}
+
+body {
+  background-image: url("https://wallpaperaccess.com/full/1092593.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  padding: 10px 40px;
+  border-radius: 15px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  letter-spacing: 5px;
+  color: #fff;
+  background-color: #faa258;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1023px) {
+  #container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  #container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#faa258, #42629d);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(#faa258, #42629d);
+}
+
+.header {
+  width: inherit;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1111111;
+}
+
+.header-logo {
+  margin-left: 40px;
+  width: 20%;
+}
+
+.header-logo img {
+  width: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.header-menu {
+  width: 60%;
+}
+
+.header-menu-list {
+  display: flex;
+  gap: 50px;
+}
+
+.header-menu-item {
+  font-size: 1.5rem;
+  letter-spacing: 1.1px;
+  text-transform: capitalize;
+}
+
+.header-menu-item a {
+  color: #7a7a7a;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.header-menu-item a:hover {
+  color: #000;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.header-action {
+  width: 20%;
+}
+
+.header-action-resume:hover {
+  background: linear-gradient(to left, #42629d, #faa258 50%, #faa258 75%, #faa258 100%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1600px) {
+  .header {
+    height: 130px;
+  }
+
+  .header-logo img {
+    width: 120px;
+  }
+
+  .header-menu-list {
+    gap: 80px;
+  }
+
+  .header-menu-item {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .header {
+    position: fixed;
+    height: 100px;
+  }
+
+  .header-logo {
+    width: 20%;
+  }
+
+  .header-menu {
+    width: 60%;
+  }
+
+  .header-menu-list {
+    gap: 35px;
+  }
+
+  .header-action {
+    width: 10%;
+  }
+
+  .header-action-resume {
+    padding: 6px 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    position: fixed;
+    top: 0 !important;
+    height: 80px;
+  }
+
+  .header-logo {
+    width: 20%;
+  }
+
+  .header-menu {
+    width: 80%;
+  }
+
+  .header-menu-list {
+    gap: 30px;
+  }
+
+  .header-action {
+    display: none;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .header {
+    position: relative;
+    top: 0 !important;
+    box-shadow: 0 0 11px #7a7a7a !important;
+    height: 100px;
+  }
+
+  .header-logo {
+    margin-left: 10px;
+  }
+
+  .header-logo img {
+    width: 100px;
+  }
+
+  .header-menu {
+    width: 90%;
+  }
+
+  .header-menu-list {
+    gap: 20px;
+  }
+
+  .header-menu-list a {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .header-action {
+    display: none;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .header {
+    height: 80px;
+    position: absolute;
+    top: 0 !important;
+  }
+
+  .header-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-logo img {
+    width: 100px;
+  }
+
+  .header-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .header-action {
+    display: none;
+  }
+}
+.section-intro {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.section-intro .section-avatar {
+  margin-right: 30px;
+}
+
+.section-intro .section-avatar img {
+  box-shadow: 0 16px 14px #d3d2d2;
+  width: 280px;
+  height: 280px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  object-fit: cover;
+  clip-path: circle(99.2% at 28% 61%);
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.section-intro .section-avatar img:hover {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+}
+
+.section-intro .section-info {
+  font-size: 2rem;
+  width: 30%;
+}
+
+.section-intro .static-txt {
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: #42629d;
+}
+
+.section-intro .section-job {
+  position: relative;
+  color: orange;
+  font-size: 1.6rem;
+  opacity: 0.6;
+  letter-spacing: 2px;
+}
+
+.section-intro .section-job::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  z-index: 11111;
+  top: 0;
+  width: 100%;
+  height: 37px;
+  animation: mymove steps(20, end) 3s infinite;
+  animation-timing-function: linear;
+  -webkit-animation: mymove steps(20, end) 3s infinite;
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 350px;
+  }
+}
+.section-intro .section-name {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.section-intro .section-desc {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.section-intro .section-btn {
+  margin-top: 20px;
+}
+
+.section-intro .section-btn .btn-download,
+.section-intro .section-btn .btn-contact {
+  border: 3px #42629d solid;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  padding: 10px 30px;
+  color: #7a7a7a;
+  background-color: #fff;
+  letter-spacing: 1px;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.section-intro .section-btn .btn-contact {
+  border: 3px #7a7a7a solid;
+}
+
+.section-intro .section-btn .btn-contact:hover {
+  background-color: #c7c7c7;
+  color: #fff;
+}
+
+.section-intro .section-btn .btn-download:hover {
+  background-color: #7696c7;
+  color: #fff;
+}
+
+@media screen and (min-width: 1600px) {
+  .section-intro {
+    margin-top: 150px;
+  }
+
+  .section-intro .section-avatar {
+    margin-right: 60px;
+  }
+
+  .section-intro .section-avatar img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+  }
+
+  .section-intro .static-txt {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-right: 5px;
+    color: #42629d;
+  }
+
+  .section-intro .section-job {
+    font-size: 2.8rem;
+  }
+
+  .section-intro .section-name {
+    font-size: 5rem;
+  }
+
+  .section-intro .section-desc {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .section-intro .section-avatar img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .section-intro .section-job {
+    font-size: 1.4rem;
+  }
+
+  .section-intro .section-name {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  .section-intro .section-desc {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  .section-intro .section-btn {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .section-intro .section-btn .btn-download,
+.section-intro .section-btn .btn-contact {
+    margin: 0 5px;
+    padding: 4px 10px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-intro {
+    margin-top: 40px;
+  }
+
+  .section-intro .section-avatar img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .section-intro .section-info {
+    width: 50%;
+  }
+
+  .section-intro .section-job {
+    font-size: 1.4rem;
+  }
+
+  .section-intro .section-name {
+    font-size: 3rem;
+    margin-top: 5px;
+  }
+
+  .section-intro .section-desc {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  .section-intro .section-btn {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .section-intro .section-btn .btn-download,
+.section-intro .section-btn .btn-contact {
+    margin: 0 5px;
+    padding: 4px 10px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .section-intro {
+    margin-top: 40px;
+  }
+
+  .section-intro .section-avatar img {
+    width: 190px;
+    height: 190px;
+    clip-path: circle(64.9% at 34% 42%);
+  }
+
+  .section-intro .section-info {
+    width: 50%;
+  }
+
+  .section-intro .section-job {
+    font-size: 1.4rem;
+  }
+
+  .section-intro .section-name {
+    font-size: 3rem;
+    margin-top: 3px;
+  }
+
+  .section-intro .section-desc {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  .section-intro .section-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .section-intro .section-btn .btn-download,
+.section-intro .section-btn .btn-contact {
+    margin: 5px 0;
+    padding: 4px 30px;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-intro {
+    margin: 20px;
+    margin-top: -10px;
+  }
+
+  .section-intro .section-avatar {
+    width: 40%;
+    margin-right: 10px;
+  }
+
+  .section-intro .section-avatar img {
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(14% 13%, 70% 0%, 100% 38%, 95% 86%, 70% 100%, 30% 100%, 0 92%, 0% 30%);
+  }
+
+  .section-intro .static-txt {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #42629d;
+    display: block;
+    margin-bottom: -8px;
+  }
+
+  .section-intro .section-info {
+    width: 50%;
+  }
+
+  .section-intro .section-job {
+    font-size: 1.2rem;
+    display: inline-block;
+  }
+
+  .section-intro .section-name {
+    font-size: 1.5rem;
+    margin-top: 9.5px;
+  }
+
+  .section-intro .section-desc {
+    margin-top: 0;
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .section-intro .section-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .section-intro .section-btn .btn-download,
+.section-intro .section-btn .btn-contact {
+    width: 130px;
+    margin: 5px 0;
+    padding: 1px 10px;
+    font-size: 1.1rem;
+  }
+}
+.section-skills {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+.section-skills__title {
+  font-size: 2rem;
+  margin-left: 40px;
+  font-weight: 500;
+}
+
+.section-skills__title .seperate {
+  display: block;
+  border: 1px solid #000;
+  width: 110px;
+  height: 1px;
+  background-color: #faa258;
+}
+
+.section-skills__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.section-skills__content .skill_item {
+  width: 40%;
+  display: flex;
+  gap: 20px;
+}
+
+.section-skills__content .skill_item-icon {
+  font-size: 3rem;
+}
+
+.section-skills__content .skill_item .skill-title {
+  display: block;
+  font-size: 2rem;
+}
+
+.section-skills__content .skill_item .skill-desc {
+  display: block;
+  font-size: 1.3rem;
+  color: #999898;
+}
+
+.html {
+  color: orange;
+}
+
+.css {
+  color: #42629d;
+}
+
+.js {
+  color: #dfdf4e;
+}
+
+.react {
+  color: #275157;
+}
+
+.boostrap {
+  color: rgba(28, 11, 88, 0.897);
+}
+
+@media screen and (min-width: 1600px) {
+  .section-skills__title {
+    font-size: 3rem;
+  }
+
+  .section-skills__content .skill_item-icon {
+    font-size: 4rem;
+  }
+
+  .section-skills__content .skill_item .skill-title {
+    font-size: 3rem;
+  }
+
+  .section-skills__content .skill_item .skill-desc {
+    font-size: 2rem;
+    margin: 5px 0;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-skills {
+    margin-top: -50px;
+  }
+
+  .section-skills__title {
+    text-align: center;
+  }
+
+  .section-skills__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .section-skills__content .skill_item {
+    width: 90%;
+    display: block;
+  }
+
+  .section-skills__content .skill_item-icon {
+    font-size: 4rem;
+  }
+
+  .section-skills__content .skill_item .skill-title {
+    display: none;
+  }
+
+  .section-skills__content .skill_item .skill-desc {
+    font-size: 1rem;
+  }
+}
+.section-project {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.section-project__title {
+  font-size: 2rem;
+  margin-left: 40px;
+  font-weight: 500;
+}
+
+.section-project__title .seperate {
+  display: block;
+  border: 1px solid #000;
+  width: 130px;
+  height: 1px;
+  background-color: #faa258;
+}
+
+.section-project__content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.section-project__content .project-item {
+  width: 45%;
+  padding: 25px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  border: 2px solid #42629d;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 0 1px 3px #7a7a7a;
+}
+
+.section-project__content .project-item:hover {
+  box-shadow: 0 2px #42629d;
+}
+
+.section-project__content .project-img {
+  width: 60%;
+}
+
+.section-project__content .project-img img {
+  min-width: 250px;
+  max-height: 200px;
+  margin: 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 0 1px 3px #7a7a7a;
+  object-fit: cover;
+}
+
+.section-project__content .project-img img:hover {
+  cursor: pointer;
+  transform: scale(1.0231);
+  -webkit-transform: scale(1.0231);
+  -moz-transform: scale(1.0231);
+  -ms-transform: scale(1.0231);
+  -o-transform: scale(1.0231);
+  border: 1px solid #faa258;
+}
+
+.section-project__content .project-info {
+  width: 40%;
+}
+
+.section-project__content .project-info .project-name {
+  font-size: 1.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.section-project__content .project-info .project-tools {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.section-project__content .project-info .project-desc {
+  margin-top: 5px;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.section-project__content .project-info .project-btn {
+  margin-top: 15px;
+  display: flex;
+}
+
+.section-project__content .project-info .project-btn .btn-view,
+.section-project__content .project-info .project-btn .btn-code {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 6px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+}
+
+.section-project__content .project-info .project-btn .btn-view:active,
+.section-project__content .project-info .project-btn .btn-code:active {
+  opacity: 0.8;
+}
+
+.section-project__content .project-info .project-btn .btn-view a,
+.section-project__content .project-info .project-btn .btn-code a {
+  font-size: 1.5rem;
+}
+
+.section-project__content .project-info .project-btn .btn-code {
+  background-image: linear-gradient(to right, #faa258, #42629d);
+}
+
+.section-project__content .project-info .project-btn .btn-code a {
+  color: #fff;
+}
+
+.section-project__content .project-info .project-btn .btn-code:hover {
+  background-image: linear-gradient(to right, #42629d, #faa258);
+}
+
+.section-project__content .project-info .project-btn .btn-view a {
+  color: #000;
+}
+
+@media screen and (min-width: 1700px) {
+  .section-project__title {
+    font-size: 3rem;
+  }
+
+  .section-project__content {
+    gap: 100px;
+  }
+
+  .section-project__content .project-item {
+    display: none;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section-project__content .project-img img {
+    min-width: 360px;
+    max-height: 250px;
+  }
+
+  .section-project__content .project-info {
+    margin-left: 20px;
+    width: 280px;
+  }
+
+  .section-project__content .project-info .project-name {
+    font-size: 3rem;
+  }
+
+  .section-project__content .project-info .project-tools {
+    font-size: 2em;
+  }
+
+  .section-project__content .project-info .project-desc {
+    font-size: 1.8rem;
+  }
+
+  .section-project__content .project-info .project-btn .btn-view,
+.section-project__content .project-info .project-btn .btn-code {
+    padding: 6px 30px;
+    margin: 0 5px;
+  }
+
+  .section-project__content .project-info .project-btn .btn-view a,
+.section-project__content .project-info .project-btn .btn-code a {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1264px) and (max-width: 1699px) {
+  .project-img img {
+    min-width: 400px;
+  }
+
+  .project-info {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1259px) {
+  .section-project__content .project-item {
+    width: 80%;
+  }
+
+  .section-project__content .project-img {
+    width: 60%;
+  }
+
+  .section-project__content .project-img img {
+    width: 400px;
+  }
+
+  .section-project__content .project-info {
+    margin-left: 0;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-project__content .project-item {
+    width: 80%;
+  }
+
+  .section-project__content .project-img {
+    width: 60%;
+  }
+
+  .section-project__content .project-img img {
+    width: 400px;
+  }
+
+  .section-project__content .project-info {
+    margin-left: 30px;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .section-project__content {
+    margin: 20px;
+  }
+
+  .section-project__content .project-item {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .section-project__content .project-img {
+    width: 60%;
+  }
+
+  .section-project__content .project-img img {
+    width: 300px;
+  }
+
+  .section-project__content .project-info {
+    margin-left: 20px;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-project__title {
+    text-align: center;
+  }
+
+  .section-project__content {
+    margin: 20px;
+  }
+
+  .section-project__content .project-item {
+    width: 98%;
+    padding: 10px;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .section-project__content .project-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-project__content .project-img img {
+    width: 290px;
+    height: 250px;
+  }
+
+  .section-project__content .project-info .project-name {
+    text-align: center;
+  }
+
+  .section-project__content .project-info .project-tools {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .section-project__content .project-info .project-desc {
+    display: none;
+  }
+
+  .section-project__content .project-info .project-btn {
+    justify-content: center;
+  }
+}
+.section-education {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.section-education__title {
+  font-size: 2rem;
+  margin-left: 40px;
+  font-weight: 500;
+}
+
+.section-education__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.section-education__content .education-item {
+  width: 40%;
+  min-height: 150px;
+  border: 2px solid #7a7a7a;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 2px #42629d;
+}
+
+.section-education__content .education-item .education-img {
+  width: 80px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0 1px 3px #7a7a7a;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
+
+.section-education__content .education-item .education-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 5px;
+}
+
+.section-education__content .education-item .education-info-name {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.section-education__content .education-item .education-info-job {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.section-education__content .education-item .education-info-desc {
+  font-size: 1.2rem;
+  color: #7a7a7a;
+}
+
+@media screen and (min-width: 1600px) {
+  .section-education__title {
+    font-size: 3rem;
+  }
+
+  .section-education__content .education-item {
+    width: 35%;
+  }
+
+  .section-education__content .education-item .education-img {
+    width: 100px;
+  }
+
+  .section-education__content .education-item .education-info-name {
+    font-size: 2rem;
+  }
+
+  .section-education__content .education-item .education-info-job {
+    font-size: 1.8rem;
+  }
+
+  .section-education__content .education-item .education-info-desc {
+    font-size: 1.6rem;
+    color: #7a7a7a;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-education__content .education-item {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .section-education__content .education-item .education-info-name {
+    font-size: 1.8rem;
+  }
+
+  .section-education__content .education-item .education-info-job {
+    font-size: 1.6rem;
+  }
+
+  .section-education__content .education-item .education-info-desc {
+    font-size: 1.4rem;
+    color: #7a7a7a;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .section-education__content .education-item {
+    width: 70%;
+  }
+
+  .section-education__content .education-item .education-info-name {
+    font-size: 1.6rem;
+  }
+
+  .section-education__content .education-item .education-info-job {
+    font-size: 1.5rem;
+  }
+
+  .section-education__content .education-item .education-info-desc {
+    font-size: 1.3rem;
+    color: #7a7a7a;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-education__title {
+    text-align: center;
+  }
+
+  .section-education__content {
+    margin-top: 20px;
+  }
+
+  .section-education__content .education-item {
+    width: 88%;
+    margin: 10px 30px;
+  }
+
+  .section-education__content .education-item .education-info-name {
+    font-size: 1.3rem;
+  }
+
+  .section-education__content .education-item .education-info-job {
+    font-size: 1.3rem;
+  }
+
+  .section-education__content .education-item .education-info-desc {
+    font-size: 1.2rem;
+  }
+}
+.section-objectives {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.section-objectives__title {
+  font-size: 2rem;
+  margin-left: 40px;
+  font-weight: 500;
+}
+
+.section-objectives__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.section-objectives__content .objectives-item {
+  width: 60%;
+  min-height: 150px;
+  border: 1px solid #7a7a7a;
+  box-shadow: 0 0 12px #7a7a7a;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  position: relative;
+}
+
+.section-objectives__content .objectives-item-text {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.section-objectives__content .objectives-item-text i {
+  font-size: 4rem;
+  color: #d8d3d3;
+  position: absolute;
+}
+
+.section-objectives__content .objectives-item-text i:first-child {
+  top: -30px;
+  left: -40px;
+}
+
+.section-objectives__content .objectives-item-text i:last-child {
+  bottom: -30px;
+  right: -40px;
+}
+
+@media screen and (min-width: 1600px) {
+  .section-objectives__title {
+    font-size: 3rem;
+  }
+
+  .section-objectives__content .objectives-item {
+    width: 60%;
+  }
+
+  .section-objectives__content .objectives-item-text {
+    font-size: 1.8rem;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-objectives__content .objectives-item {
+    width: 76%;
+  }
+
+  .section-objectives__content .objectives-item-text {
+    font-size: 1.4rem;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .section-objectives__content .objectives-item {
+    width: 76%;
+  }
+
+  .section-objectives__content .objectives-item-text {
+    font-size: 1.4rem;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-objectives__title {
+    text-align: center;
+  }
+
+  .section-objectives__content {
+    margin-top: 0px;
+  }
+
+  .section-objectives__content .objectives-item {
+    width: 100%;
+    margin: 20px;
+  }
+
+  .section-objectives__content .objectives-item-text {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+}
+.section-activity {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.section-activity__title {
+  font-size: 3rem;
+  margin-left: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.section-activity__content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-activity__content .activity-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-activity__content .activity-slider .slider-item {
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+}
+
+.section-activity__content .activity-slider .slider-item img {
+  min-width: 400px;
+  height: 300px;
+  margin: 0px 30px;
+  border: 2px solid #42629d;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .section-activity__content {
+    width: 100%;
+  }
+
+  .section-activity__content .activity-slider .slider-item img {
+    min-width: 400px;
+    height: 280px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-activity__title {
+    font-size: 2rem;
+  }
+
+  .section-activity__content {
+    width: 100%;
+  }
+
+  .section-activity__content .activity-slider .slider-item img {
+    width: 200px;
+    height: 280px;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .section-activity__title {
+    font-size: 2rem;
+  }
+
+  .section-activity__content {
+    width: 100%;
+  }
+
+  .section-activity__content .activity-slider .slider-item img {
+    min-width: 400px !important;
+    height: 250px;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .section-activity__title {
+    font-size: 2rem;
+  }
+
+  .section-activity__content {
+    width: 100%;
+  }
+
+  .section-activity__content .activity-slider .slider-item img {
+    min-width: 250px !important;
+    height: 200px;
+  }
+}
+.social-box {
+  position: fixed;
+  width: fit-content;
+  top: 70%;
+  left: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 1px gray;
+  z-index: 111111111111111100000000000;
+}
+
+.social-box__linkedin a ion-icon {
+  font-size: 3rem;
+  color: #d65012;
+}
+
+.social-box__facebook a ion-icon {
+  font-size: 3rem;
+  color: #3535b1;
+}
+
+.social-box__github a ion-icon {
+  font-size: 3rem;
+  color: #000;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .social-box {
+    position: fixed;
+    top: 90%;
+    left: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .social-box {
+    position: fixed;
+    top: 85%;
+    left: 10px;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 767px) {
+  .social-box {
+    position: fixed;
+    top: 90%;
+    left: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 539px) {
+  .social-box {
+    position: fixed;
+    top: 90%;
+    left: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+  }
+}
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.scss.map */
+
+/*# sourceMappingURL=style.scss.map */
